@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Velo_Call_CenterApp: App {
+	@State private var twilio = TwilioManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+		.environment(twilio)
     }
 }

@@ -11,6 +11,10 @@
 		1D3487C42AFAA60C00FD4046 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3487C32AFAA60C00FD4046 /* ContentView.swift */; };
 		1D3487C62AFAA60E00FD4046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D3487C52AFAA60E00FD4046 /* Assets.xcassets */; };
 		1D3487CA2AFAA60E00FD4046 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D3487C92AFAA60E00FD4046 /* Preview Assets.xcassets */; };
+		1D3487D42AFAA87C00FD4046 /* TwilioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3487D32AFAA87C00FD4046 /* TwilioManager.swift */; };
+		1D86F9662B116C0A001211B6 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D86F9652B116C0A001211B6 /* TaskModel.swift */; };
+		1D86F9682B117CEF001211B6 /* SidebarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D86F9672B117CEF001211B6 /* SidebarList.swift */; };
+		1D86F9882B1255C6001211B6 /* CallDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D86F9872B1255C6001211B6 /* CallDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,11 @@
 		1D3487C52AFAA60E00FD4046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D3487C72AFAA60E00FD4046 /* Velo_Call_Center.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Velo_Call_Center.entitlements; sourceTree = "<group>"; };
 		1D3487C92AFAA60E00FD4046 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1D3487D32AFAA87C00FD4046 /* TwilioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwilioManager.swift; sourceTree = "<group>"; };
+		1D3487D72AFAAC1700FD4046 /* Velo-Call-Center-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Velo-Call-Center-Info.plist"; sourceTree = SOURCE_ROOT; };
+		1D86F9652B116C0A001211B6 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		1D86F9672B117CEF001211B6 /* SidebarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarList.swift; sourceTree = "<group>"; };
+		1D86F9872B1255C6001211B6 /* CallDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +61,16 @@
 		1D3487C02AFAA60C00FD4046 /* Velo Call Center */ = {
 			isa = PBXGroup;
 			children = (
+				1D3487D72AFAAC1700FD4046 /* Velo-Call-Center-Info.plist */,
 				1D3487C12AFAA60C00FD4046 /* Velo_Call_CenterApp.swift */,
 				1D3487C32AFAA60C00FD4046 /* ContentView.swift */,
+				1D86F9872B1255C6001211B6 /* CallDetail.swift */,
+				1D86F9652B116C0A001211B6 /* TaskModel.swift */,
 				1D3487C52AFAA60E00FD4046 /* Assets.xcassets */,
 				1D3487C72AFAA60E00FD4046 /* Velo_Call_Center.entitlements */,
 				1D3487C82AFAA60E00FD4046 /* Preview Content */,
+				1D3487D32AFAA87C00FD4046 /* TwilioManager.swift */,
+				1D86F9672B117CEF001211B6 /* SidebarList.swift */,
 			);
 			path = "Velo Call Center";
 			sourceTree = "<group>";
@@ -85,6 +99,8 @@
 			dependencies = (
 			);
 			name = "Velo Call Center";
+			packageProductDependencies = (
+			);
 			productName = "Velo Call Center";
 			productReference = 1D3487BE2AFAA60C00FD4046 /* Velo Call Center.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +129,8 @@
 				Base,
 			);
 			mainGroup = 1D3487B52AFAA60C00FD4046;
+			packageReferences = (
+			);
 			productRefGroup = 1D3487BF2AFAA60C00FD4046 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +157,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D86F9882B1255C6001211B6 /* CallDetail.swift in Sources */,
+				1D3487D42AFAA87C00FD4046 /* TwilioManager.swift in Sources */,
 				1D3487C42AFAA60C00FD4046 /* ContentView.swift in Sources */,
+				1D86F9662B116C0A001211B6 /* TaskModel.swift in Sources */,
+				1D86F9682B117CEF001211B6 /* SidebarList.swift in Sources */,
 				1D3487C22AFAA60C00FD4046 /* Velo_Call_CenterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +225,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -257,6 +280,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "";
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -274,6 +298,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Velo-Call-Center-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -292,7 +317,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nicholasblack.Velo-Call-Center";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,6 +338,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Velo-Call-Center-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -330,7 +357,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nicholasblack.Velo-Call-Center";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,24 +1,22 @@
-//
-//  ContentView.swift
-//  Velo Call Center
-//
-//  Created by Nick Black on 11/7/23.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+	@State private var selectedTask: TaskModel?
+	@Environment(TwilioManager.self) var twilio
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+		NavigationSplitView {
+			SidebarList($selectedTask)
+		} detail: {
+			if let selectedTask {
+				
+			}
+		}
     }
 }
 
 #Preview {
-    ContentView()
+	@State var manager = TwilioManager()
+	return ContentView()
+		.environment(manager)
 }
