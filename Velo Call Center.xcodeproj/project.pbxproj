@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0121047D2B152FC90045BB43 /* ElapsedTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0121047C2B152FC80045BB43 /* ElapsedTimeFormatter.swift */; };
+		0121047F2B1530950045BB43 /* CustomerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0121047E2B1530950045BB43 /* CustomerDetailsView.swift */; };
+		012104812B1533E10045BB43 /* FormLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012104802B1533E10045BB43 /* FormLabel.swift */; };
 		1D3487C22AFAA60C00FD4046 /* Velo_Call_CenterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3487C12AFAA60C00FD4046 /* Velo_Call_CenterApp.swift */; };
 		1D3487C42AFAA60C00FD4046 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3487C32AFAA60C00FD4046 /* ContentView.swift */; };
 		1D3487C62AFAA60E00FD4046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D3487C52AFAA60E00FD4046 /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0121047C2B152FC80045BB43 /* ElapsedTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeFormatter.swift; sourceTree = "<group>"; };
+		0121047E2B1530950045BB43 /* CustomerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailsView.swift; sourceTree = "<group>"; };
+		012104802B1533E10045BB43 /* FormLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabel.swift; sourceTree = "<group>"; };
 		1D3487BE2AFAA60C00FD4046 /* Velo Call Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Velo Call Center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3487C12AFAA60C00FD4046 /* Velo_Call_CenterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Velo_Call_CenterApp.swift; sourceTree = "<group>"; };
 		1D3487C32AFAA60C00FD4046 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +48,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012104792B1513080045BB43 /* View Styles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Styles";
+			sourceTree = "<group>";
+		};
 		1D3487B52AFAA60C00FD4046 = {
 			isa = PBXGroup;
 			children = (
@@ -61,16 +74,20 @@
 		1D3487C02AFAA60C00FD4046 /* Velo Call Center */ = {
 			isa = PBXGroup;
 			children = (
+				012104792B1513080045BB43 /* View Styles */,
 				1D3487D72AFAAC1700FD4046 /* Velo-Call-Center-Info.plist */,
 				1D3487C12AFAA60C00FD4046 /* Velo_Call_CenterApp.swift */,
 				1D3487C32AFAA60C00FD4046 /* ContentView.swift */,
 				1D86F9872B1255C6001211B6 /* CallDetail.swift */,
+				0121047E2B1530950045BB43 /* CustomerDetailsView.swift */,
 				1D86F9652B116C0A001211B6 /* TaskModel.swift */,
 				1D3487C52AFAA60E00FD4046 /* Assets.xcassets */,
 				1D3487C72AFAA60E00FD4046 /* Velo_Call_Center.entitlements */,
 				1D3487C82AFAA60E00FD4046 /* Preview Content */,
 				1D3487D32AFAA87C00FD4046 /* TwilioManager.swift */,
 				1D86F9672B117CEF001211B6 /* SidebarList.swift */,
+				0121047C2B152FC80045BB43 /* ElapsedTimeFormatter.swift */,
+				012104802B1533E10045BB43 /* FormLabel.swift */,
 			);
 			path = "Velo Call Center";
 			sourceTree = "<group>";
@@ -157,12 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0121047D2B152FC90045BB43 /* ElapsedTimeFormatter.swift in Sources */,
 				1D86F9882B1255C6001211B6 /* CallDetail.swift in Sources */,
 				1D3487D42AFAA87C00FD4046 /* TwilioManager.swift in Sources */,
 				1D3487C42AFAA60C00FD4046 /* ContentView.swift in Sources */,
 				1D86F9662B116C0A001211B6 /* TaskModel.swift in Sources */,
 				1D86F9682B117CEF001211B6 /* SidebarList.swift in Sources */,
+				012104812B1533E10045BB43 /* FormLabel.swift in Sources */,
 				1D3487C22AFAA60C00FD4046 /* Velo_Call_CenterApp.swift in Sources */,
+				0121047F2B1530950045BB43 /* CustomerDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

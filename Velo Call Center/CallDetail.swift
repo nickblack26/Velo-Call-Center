@@ -1,6 +1,34 @@
 import SwiftUI
 
+enum CallDetailTab: String, CaseIterable {
+	case Hold
+	case Mute
+	case Stop = "Stop Rec"
+	case Keypad
+	case Add = "Add Guest"
+	
+	var icon: String {
+		switch self {
+			case .Hold:
+				"pause"
+			case .Mute:
+				"mic.slash"
+			case .Stop:
+				"circle.circle"
+			case .Keypad:
+				"circle.grid.3x3"
+			case .Add:
+				"person.badge.plus"
+		}
+	}
+}
+
 struct CallDetail: View {
+	@State private var timeFormatter = ElapsedTimeFormatter()
+	@State private var selectedTab: CallDetailTab?
+	@State private var tabProgess: CGFloat = 0.5
+	@State private var animationAmount = 1.0
+	@State private var isRecording = true
 	var task: TaskModel
 	
 	init(_ task: TaskModel) {
@@ -10,15 +38,15 @@ struct CallDetail: View {
     var body: some View {
 		List {
 			Section {
-				HStack {
+				HStack(spacing: 24) {
 					AsyncImage(
 						url: URL(string: "https://assets-global.website-files.com/61d87d426829a9bac65eeb9e/654d2b113b66e71152acc84c_Nick_Headshot_Fall2023-p-500.jpg"
 								)
 					) { image in
 						image
 							.resizable()
-							.scaledToFill()
 							.frame(width: 150, height: 200)
+							.scaledToFill()
 					} placeholder: {
 						Rectangle()
 							.fill(.green)
@@ -30,7 +58,7 @@ struct CallDetail: View {
 							Image(systemName: "phone.connection")
 								.imageScale(.large)
 							
-							Text("Talking – 01:58 via Virtual Agent Transfer")
+							Text("Talking – \(Text(NSNumber(value: task.age), formatter: timeFormatter).fontWeight(.black)) via Virtual Agent Transfer")
 							
 							Button {
 								
@@ -42,6 +70,7 @@ struct CallDetail: View {
 							}
 							.buttonStyle(.bordered)
 							.tint(.red)
+							.disabled(!isRecording)
 						}
 						
 						Text(task.attributes["fullName"] ?? "Unknown Number")
@@ -56,57 +85,28 @@ struct CallDetail: View {
 			
 			Section {
 				HStack {
-					Button {
-						
-					} label: {
-						HStack {
-							Image(systemName: "pause")
-							Text("Hold")
+					HStack(spacing: 0) {
+						ForEach(CallDetailTab.allCases, id: \.self) { tab in
+							let isSelectedTab = tab == selectedTab
+							Button {
+								withAnimation(.spring) {
+									if isSelectedTab {
+										selectedTab = nil
+									} else {
+										selectedTab = tab
+									}
+								}
+							} label: {
+								HStack {
+									Image(systemName: tab.icon)
+									Text(tab.rawValue)
+								}
+								.padding(12)
+							}
+							.buttonStyle(.borderedProminent)
+							.tint(isSelectedTab ? .white : .clear)
+							.foregroundStyle(.primary)
 						}
-						.padding(12)
-					}
-					
-					Button {
-						
-					} label: {
-						HStack {
-							Image(systemName: "mic.slash")
-							Text("Mute")
-						}
-						.padding(12)
-					}
-					
-					Button {
-						
-					} label: {
-						HStack {
-							Image(systemName: "circle.circle")
-							Text("Stop Rec")
-						}
-						.padding(12)
-					}
-					.buttonStyle(.borderedProminent)
-					.foregroundStyle(.primary)
-					.tint(.white)
-					
-					Button {
-						
-					} label: {
-						HStack {
-							Image(systemName: "circle.grid.3x3")
-							Text("Keypad")
-						}
-						.padding(12)
-					}
-					
-					Button {
-						
-					} label: {
-						HStack {
-							Image(systemName: "person.badge.plus")
-							Text("Add Guest")
-						}
-						.padding(12)
 					}
 					
 					Spacer()
@@ -120,7 +120,6 @@ struct CallDetail: View {
 						}
 						.padding(12)
 					}
-					
 					.buttonStyle(.borderedProminent)
 					.tint(.red)
 				}
@@ -132,6 +131,12 @@ struct CallDetail: View {
 				)
 			}
 			.listRowSeparator(.hidden)
+			
+			Section {
+				TabView(selection: .constant("Details")) {
+					
+				}
+			}
 		}
 		.listStyle(.plain)
     }
